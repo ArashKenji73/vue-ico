@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="content">
+      <div class="menu-banner-container" id="particles-js">
+        <AppNavbar></AppNavbar>
+        <vue-particles
+        :hoverEffect="false"
+        :particleSize= 3
+        :clickEffect = "false"
+        >
+      </vue-particles>
+      <AppBanner></AppBanner>
+      </div>
+      <AppAbout></AppAbout>
+      <AppFeature></AppFeature>
+      <AppTimeline></AppTimeline>
+      <AppStatistic 
+      :ChartType="'doughnut'"
+      :data = "[1, 1, 1, 1]"
+      :labels = "['num1', 'num2', 'num3', 'num4']"
+      ></AppStatistic>
+
+
+      
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppNavbar from '@/components/Navbar/navbar';
+import AppBanner from '@/components/Banner/banner';
+import AppAbout from '@/components/About/about-wrapper';
+import AppFeature from '@/components/Features/features-wrapper';
+import AppTimeline from '@/components/Timeline/timeline-wrapper';
+import AppStatistic from '@/components/custom-statistic/custom';
+//import AppStatistic from '@/components/Statistics/statistic-wrapper';
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    AppNavbar,
+    AppBanner,
+    AppAbout,
+    AppFeature,
+    AppTimeline,
+    AppStatistic
+    
+  },
+  created(){
+    AOS.init();
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
+
 </style>
