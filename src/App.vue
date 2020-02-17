@@ -20,6 +20,8 @@
       :labels = "['num1', 'num2', 'num3', 'num4']"
       ></AppStatistic>
 
+      <AppSubscribe></AppSubscribe>
+
 
       
     </div>
@@ -33,6 +35,7 @@ import AppAbout from '@/components/About/about-wrapper';
 import AppFeature from '@/components/Features/features-wrapper';
 import AppTimeline from '@/components/Timeline/timeline-wrapper';
 import AppStatistic from '@/components/custom-statistic/custom';
+import AppSubscribe from '@/components/Subscribe/subscribe-wrapper';
 //import AppStatistic from '@/components/Statistics/statistic-wrapper';
 
 
@@ -47,8 +50,8 @@ export default {
     AppAbout,
     AppFeature,
     AppTimeline,
-    AppStatistic
-    
+    AppStatistic,
+    AppSubscribe
   },
   created(){
     AOS.init();

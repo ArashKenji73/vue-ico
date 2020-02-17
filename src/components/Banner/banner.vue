@@ -18,24 +18,7 @@
                 token distr
             </button>
         </div>
-
-        <div class="socials socials-banners">
-            <a href="#" class="social">
-                <i class="fab fa-telegram-plane"></i>
-            </a>
-            <a href="#" class="social">
-                <i class="fab fa-telegram-plane"></i>
-            </a>
-            <a href="#" class="social">
-                <i class="fab fa-telegram-plane"></i>
-            </a>
-            <a href="#" class="social">
-                <i class="fab fa-telegram-plane"></i>
-            </a>
-            <a href="#" class="social">
-                <i class="fab fa-telegram-plane"></i>
-            </a>
-        </div>
+        <Socials class="socials-banners"></Socials>
     </div>
 
     <div class="banner-img" data-aos="fade-left">
@@ -45,8 +28,11 @@
 </div>
 </template>
 <script>
+import Socials from '@/components/Socials/socials'
 export default {
-    
+    components:{
+        Socials
+    }
 }
 </script>
 <style lang="scss">

@@ -1,0 +1,27 @@
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    .social{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        transition: all 0.3s;
+        svg{
+            color: #3c3c3c;
+        }
+        &:hover{
+            background: $Purple;
+            svg{
+                color: #fff;   
+            }
+            
+        }
+    }
+}
